@@ -15,9 +15,7 @@ function appendPosts(posts){
     let imageUrl = post.node.thumbnail_src;
     console.log(imageUrl);
     htmlTemplate += /*html*/ `
-      <article>
         <img src="${imageUrl}">
-      </article>
     `;
   }
   document.querySelector("#instagram-posts").innerHTML = htmlTemplate;

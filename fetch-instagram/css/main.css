@@ -48,6 +48,7 @@ button {
   display: grid;
   grid-template-columns: 100%;
   padding: 10px;
+  gap: 1rem;
 }
 
 @media (min-width: 600px) {
@@ -62,14 +63,8 @@ button {
   }
 }
 
-.grid-container>article {
-  text-align: center;
-  padding: 10px;
-}
-
-.grid-container>article img {
+.grid-container> img {
   width: 300px;
   width: 100%;
   height: auto;
-  margin-bottom: 1em;
 }

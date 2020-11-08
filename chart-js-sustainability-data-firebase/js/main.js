@@ -98,7 +98,7 @@ function appendCarbonFootprint(sustainabilityData) {
     data: {
       datasets: [{
         data: data.carbonFootprint,
-        label: 'Carbon Footprint WholeFarm',
+        label: 'Carbon Footprint Whole Farm',
         fill: false,
         borderColor: "#e755ba",
         backgroundColor: "#e755ba",

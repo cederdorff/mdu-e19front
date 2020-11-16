@@ -2,7 +2,6 @@
 
 function inputChange() {
   let inputFields = document.querySelectorAll("input");
-  let numberOfInputFields = inputFields.length;
 
   let numberOfInputFieldsWithValue = 0;
   for (const inputField of inputFields) {
@@ -11,6 +10,7 @@ function inputChange() {
     }
   }
 
-  document.querySelector("#progress").max = numberOfInputFields;
-  document.querySelector("#progress").value = numberOfInputFieldsWithValue;
+  let progressBar = document.querySelector("#progress");
+  progressBar.max = inputFields.length;
+  progressBar.value = numberOfInputFieldsWithValue;
 }

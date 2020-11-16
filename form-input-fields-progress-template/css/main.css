@@ -76,16 +76,15 @@ input {
   margin: auto;
 }
 
-progress[value] {
+/* progress[value] {
   appearance: none;
   height: 20px;
 }
 
-/* Chrome */
 progress[value]::-webkit-progress-bar {
   background-color: var(--light-green);
 }
 
 progress[value]::-webkit-progress-value {
   background-color: var(--green);
-}
+} */

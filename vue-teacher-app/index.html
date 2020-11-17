@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>VUE.JS PROJECT TEMPLATE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Get started with HTML, CSS and JavaScript">
+  <meta name="author" content="Rasmus Cederdorff">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+</head>
+
+<body>
+  <!-- Vue App Start -->
+  <div id="app">
+    <h1>Teachers</h1>
+    <section class="grid-container">
+      <article v-for="teacher in teachers">
+        <img v-bind:src="teacher.img">
+        <h3>{{teacher.name}}</h3>
+        {{teacher.position}} <br>
+        <a v-bind:href="'mailto:'+teacher.mail">{{teacher.mail}}</a>
+      </article>
+    </section>
+
+    <input v-model="newTeacher.name" placeholder="Name">
+    <input v-model="newTeacher.mail" placeholder="Mail">
+    <input v-model="newTeacher.position" placeholder="Position">
+    <input v-model="newTeacher.img" placeholder="Image Url">
+    <button type="button" v-on:click="addNewTeacher">Add Teacher</button>
+
+  </div><!-- Vue App End -->
+
+  <!-- Vue.js, development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- main js file -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

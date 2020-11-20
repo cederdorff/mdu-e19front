@@ -45,8 +45,6 @@ export default {
       fileReader.readAsDataURL(imageFile);
     },
     updatePost() {
-      console.log(this.post);
-
       postRef.doc(this.post.id).set({
         description: this.post.description,
         image: this.post.image
@@ -66,17 +64,6 @@ form {
 button.choose-image {
   background-color: var(--primary);
 }
-
-/* article button {
-  text-align: center;
-  cursor: pointer;
-  border: none;
-  padding: 10px 8px;
-  border-radius: 0;
-  color: var(--text-color-light);
-  background-color: var(--green);
-  width: 40%;
-} */
 
 input {
   margin: 1em auto;

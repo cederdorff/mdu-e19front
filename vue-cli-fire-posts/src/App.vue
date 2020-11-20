@@ -12,6 +12,7 @@
 :root {
   --primary: #2c3e50;
   --secondary: #42b983;
+  --danger: #b94242;
   --text-color-light: #f1f1f1;
   --text-color-dark: #333;
 }

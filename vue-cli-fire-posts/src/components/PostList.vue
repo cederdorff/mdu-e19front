@@ -6,7 +6,7 @@
       <router-link :to="{ name: 'Update', params: { post: post } }">
         <button>Update</button>
       </router-link>
-      <button type="button" v-on:click="deletePost(post.id)">Delete</button>
+      <button class="delete" v-on:click="deletePost(post.id)">Delete</button>
     </article>
   </div>
 </template>
@@ -19,8 +19,8 @@ export default {
       posts: []
     };
   },
-  methods:{
-    deletePost(id){
+  methods: {
+    deletePost(id) {
       postRef.doc(id).delete();
     }
   },
@@ -31,6 +31,10 @@ export default {
 </script>
 
 <style scoped>
+button.delete {
+  background-color: var(--danger);
+  margin-top: 10px;
+}
 /* ---------- Grid container ---------- */
 .grid-container {
   display: grid;

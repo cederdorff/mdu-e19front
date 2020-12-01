@@ -10,7 +10,7 @@ let _teachers = [];
 Fetches post data from my headless cms
 */
 function getPersons() {
-  fetch('http://headlesscms.cederdorff.com/wp-json/wp/v2/posts?_embed&categories=3')
+  fetch('https://headlesscms.cederdorff.com/wp-json/wp/v2/posts?_embed&categories=3')
     .then(function (response) {
       return response.json();
     })
@@ -30,7 +30,7 @@ function appendPersons(persons) {
       '<article>' +
       '<img src="' + getFeaturedImageUrl(person) + '">' +
       '<h3>' + person.title.rendered + '</h3>' +
-      '<p>' + person.acf.age + 'years old</p>' +
+      '<p>' + person.acf.age + ' years old</p>' +
       '<p>Hair color:' + person.acf.hairColor + '</p>' +
       '<p>Relation:' + person.acf.relation + '</p>' +
       '</article>';
@@ -42,7 +42,7 @@ function appendPersons(persons) {
 Fetches post data from my headless cms
 */
 function getTeachers() {
-  fetch("http://headlesscms.cederdorff.com/wp-json/wp/v2/posts?_embed&categories=2")
+  fetch("https://headlesscms.cederdorff.com/wp-json/wp/v2/posts?_embed&categories=2")
     .then(function (response) {
       return response.json();
     })

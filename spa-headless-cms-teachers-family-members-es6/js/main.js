@@ -10,7 +10,7 @@ Fetches post data from my headless cms
 */
 async function getPersons() {
   showLoader();
-  let response = await fetch('http://headlesscms.cederdorff.com/wp-json/wp/v2/posts?_embed&categories=3');
+  let response = await fetch('https://headlesscms.cederdorff.com/wp-json/wp/v2/posts?_embed&categories=3');
   let data = await response.json();
   _familyMembers = data;
   appendPersons(_familyMembers);
@@ -40,7 +40,7 @@ Fetches post data from my headless cms
 */
 async function getTeachers() {
   showLoader();
-  let data = await fetch('http://headlesscms.cederdorff.com/wp-json/wp/v2/posts?_embed&categories=2').then(response => response.json());
+  let data = await fetch('https://headlesscms.cederdorff.com/wp-json/wp/v2/posts?_embed&categories=2').then(response => response.json());
   _teachers = data;
   appendTeachers(_teachers);
   showLoader(false);

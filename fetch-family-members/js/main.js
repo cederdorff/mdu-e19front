@@ -7,15 +7,16 @@ let _familyMembers = [];
 /*
 Fetches json data from the file persons.json
 */
-fetch('json/persons.json')
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (jsonData) {
-    console.log(jsonData);
-    _familyMembers = jsonData; // storing my json data in a global variable for later use. 
-    appendPersons(_familyMembers);
-  });
+
+async function fetchPersons() {
+  let response = await fetch('json/persons.json');
+  let data = await response.json();
+  _familyMembers = data; // storing my json data in a global variable for later use. 
+  console.log(_familyMembers);
+  appendPersons(_familyMembers);
+}
+
+fetchPersons();
 
 /*
 Appends json data to the DOM
@@ -23,7 +24,7 @@ Appends json data to the DOM
 function appendPersons(persons) {
   let htmlTemplate = "";
   for (let person of persons) {
-    htmlTemplate += /*html*/`
+    htmlTemplate += /*html*/ `
       <article>
         <img src="${person.img}">
         <h4>${person.name}</h4>
@@ -76,4 +77,3 @@ function add() {
   _familyMembers.push(newPerson);
   appendPersons(_familyMembers);
 }
-
